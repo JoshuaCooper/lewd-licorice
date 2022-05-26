@@ -1,0 +1,16 @@
+#Airflow Service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: airflow-service
+spec:
+  selector:
+    app: airflow
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 51000
+  type: LoadBalancer
+
