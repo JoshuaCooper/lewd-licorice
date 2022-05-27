@@ -1,0 +1,8 @@
+#RabbitMQ Configmap
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: rabbitmq-config
+data:
+  DataSet: 'Temp Data Here'
