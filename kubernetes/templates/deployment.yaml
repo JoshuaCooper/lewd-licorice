@@ -1,0 +1,22 @@
+#<App Name> Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <App Name>
+  labels:
+    app: <App Name>
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: <App Name> 
+  template:
+    metadata:
+      labels:
+        app: <App Name>
+    spec:
+      containers:
+        - name: <App Name>
+          image: localhost:5000/<Image Name>:<Tag>
+          imagePullPolicy: Always
+
