@@ -1,9 +1,10 @@
-# lewd-licorice
+# obscene-licorice
 Minikube templates for various application stacks
 
-## 
+## Quick Start -  
 Run this in a separate terminal to start a local container registry. 
 <pre>docker run --rm -it --network=host alpine ash -c "apk add socat && socat TCP-LISTEN:5000,reuseaddr,fork TCP:$(minikube ip):5000"</pre>
+
 Pull images into your local container registry: <pre>./setup.sh</pre>
 <pre>./startup.sh</pre>
 
